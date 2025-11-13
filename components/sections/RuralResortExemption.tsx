@@ -1,6 +1,6 @@
 import { Section } from '../ui/Section';
 import { Card } from '../ui/Card';
-import { PETITION_REQUIREMENTS, RURAL_RESORT_COUNTIES } from '@/lib/data/constants';
+import { PETITION_REQUIREMENTS, RURAL_RESORT_COUNTIES_DATA } from '@/lib/data/constants';
 
 export function RuralResortExemption() {
   return (
@@ -15,20 +15,71 @@ export function RuralResortExemption() {
         <p className="text-slate-300 mb-4">
           HB23-1304, signed in June 2023, established a petition process allowing the following <strong>12 rural resort counties</strong> to request approval for higher AMI limits (up to 140% for rental, 160% for ownership):
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-4">
-          {RURAL_RESORT_COUNTIES.map((county) => (
-            <div key={county.name} className="bg-slate-900/50 rounded px-3 py-2 text-slate-200 text-sm">
-              {county.name}
-              {county.vacancyRate && (
-                <span className="block text-xs text-slate-400">
-                  {county.vacancyRate}% vacant
-                </span>
-              )}
-            </div>
-          ))}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-6">
+          {RURAL_RESORT_COUNTIES_DATA
+            .filter(c => !['Hinsdale', 'Lake'].includes(c.county)) // Filter to official 12 rural resort counties
+            .sort((a, b) => b.vacancyRate - a.vacancyRate)
+            .map((county) => {
+              const isHighVacancy = county.vacancyRate > 50;
+              const isVeryHighSeasonal = county.seasonalRecreationalPercent && county.seasonalRecreationalPercent > 85;
+
+              return (
+                <div
+                  key={county.county}
+                  className={`rounded px-3 py-2 text-sm ${
+                    isHighVacancy
+                      ? 'bg-red-900/30 border border-red-500'
+                      : 'bg-slate-900/50'
+                  }`}
+                >
+                  <div className={`font-semibold ${isHighVacancy ? 'text-red-200' : 'text-slate-200'}`}>
+                    {county.county}
+                  </div>
+                  <div className="text-xs text-slate-400 mt-1">
+                    {county.vacancyRate.toFixed(1)}% vacant
+                  </div>
+                  {county.seasonalRecreationalPercent && (
+                    <div className={`text-xs mt-0.5 ${isVeryHighSeasonal ? 'text-red-300 font-semibold' : 'text-slate-500'}`}>
+                      {county.seasonalRecreationalPercent.toFixed(1)}% seasonal
+                    </div>
+                  )}
+                </div>
+              );
+            })}
         </div>
-        <p className="text-slate-300">
-          The exemption applies only to Land Banking, Equity, and Concessionary Debt programs, and is valid for the current 3-year funding cycle.
+
+        <div className="grid md:grid-cols-3 gap-4 mb-4 p-4 bg-slate-900/50 rounded">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-red-400">
+              {(RURAL_RESORT_COUNTIES_DATA
+                .filter(c => !['Hinsdale', 'Lake'].includes(c.county))
+                .reduce((sum, c) => sum + c.vacancyRate, 0) / 12).toFixed(1)}%
+            </div>
+            <div className="text-xs text-slate-400 mt-1">Average Vacancy Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-orange-400">
+              {(RURAL_RESORT_COUNTIES_DATA
+                .filter(c => !['Hinsdale', 'Lake'].includes(c.county) && c.seasonalRecreationalPercent)
+                .reduce((sum, c) => sum + (c.seasonalRecreationalPercent || 0), 0) / 12).toFixed(1)}%
+            </div>
+            <div className="text-xs text-slate-400 mt-1">Avg Seasonal/Recreational</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-blue-400">
+              {RURAL_RESORT_COUNTIES_DATA
+                .filter(c => !['Hinsdale', 'Lake'].includes(c.county))
+                .reduce((sum, c) => c.totalHousingUnits + sum, 0).toLocaleString()}
+            </div>
+            <div className="text-xs text-slate-400 mt-1">Total Housing Units</div>
+          </div>
+        </div>
+
+        <p className="text-slate-300 text-sm mb-2">
+          <strong className="text-red-300">The Crisis:</strong> Despite an average vacancy rate of 36%, most vacant homes are seasonal/recreational properties unavailable to the local workforce. Counties with over 50% vacancy (highlighted in red) face the most severe challenges.
+        </p>
+        <p className="text-slate-300 text-sm">
+          <strong>Program Scope:</strong> The exemption applies only to Land Banking, Equity, and Concessionary Debt programs, and is valid for the current 3-year funding cycle.
         </p>
       </div>
 
