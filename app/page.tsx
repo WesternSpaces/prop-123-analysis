@@ -2,7 +2,6 @@ import { Navigation } from '@/components/Navigation';
 import { Hero } from '@/components/sections/Hero';
 import { ExecutiveSummary } from '@/components/sections/ExecutiveSummary';
 import { AMIProblem } from '@/components/sections/AMIProblem';
-import { CommunityStories } from '@/components/sections/CommunityStories';
 import { RuralResortExemption } from '@/components/sections/RuralResortExemption';
 import { HousingCrisisData } from '@/components/sections/HousingCrisisData';
 import { FundingDisparity } from '@/components/sections/FundingDisparity';
@@ -17,7 +16,6 @@ export default function Home() {
       <Hero />
       <ExecutiveSummary />
       <AMIProblem />
-      <CommunityStories />
       <RuralResortExemption />
       <HousingCrisisData />
       <FundingDisparity />

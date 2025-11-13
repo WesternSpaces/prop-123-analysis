@@ -6,7 +6,6 @@ import Link from 'next/link';
 const navItems = [
   { label: 'Overview', href: '#overview' },
   { label: 'The AMI Problem', href: '#ami-problem' },
-  { label: 'Community Stories', href: '#stories' },
   { label: 'Rural Resort Exemption', href: '#exemption' },
   { label: 'Housing Crisis Data', href: '#housing-crisis-data' },
   { label: 'Funding Disparity', href: '#funding-disparity' },
