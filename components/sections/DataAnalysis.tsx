@@ -2,7 +2,7 @@
 
 import { Section } from '../ui/Section';
 import { Card } from '../ui/Card';
-import { FUNDING_RESULTS, RURAL_RESORT_COUNTIES } from '@/lib/data/constants';
+import { FUNDING_RESULTS, RURAL_RESORT_COUNTIES_DATA } from '@/lib/data/constants';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 
 export function DataAnalysis() {
@@ -31,14 +31,13 @@ export function DataAnalysis() {
     amount: award.amount,
   }));
 
-  // Vacancy rates for rural resort counties
-  const vacancyData = RURAL_RESORT_COUNTIES
-    .filter(county => county.vacancyRate !== null)
+  // Vacancy rates for rural resort counties - using comprehensive data
+  const vacancyData = RURAL_RESORT_COUNTIES_DATA
     .map(county => ({
-      name: county.name,
+      name: county.county === 'Hinsdale' ? 'Hinsdale*' : county.county,
       vacancy: county.vacancyRate,
     }))
-    .sort((a, b) => (b.vacancy || 0) - (a.vacancy || 0));
+    .sort((a, b) => b.vacancy - a.vacancy);
 
   const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899'];
 
@@ -142,9 +141,14 @@ export function DataAnalysis() {
               </Bar>
             </BarChart>
           </ResponsiveContainer>
-          <p className="text-sm text-slate-500 mt-4">
-            Counties with over 50% vacancy shown in darker red
-          </p>
+          <div className="mt-4 space-y-2">
+            <p className="text-sm text-slate-500">
+              Counties with over 50% vacancy shown in darker red
+            </p>
+            <p className="text-xs text-slate-500 italic">
+              * Hinsdale County is currently applying for rural resort classification
+            </p>
+          </div>
         </Card>
 
         <div className="space-y-6">
