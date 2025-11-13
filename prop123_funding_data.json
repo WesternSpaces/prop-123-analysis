@@ -1,0 +1,618 @@
+{
+  "metadata": {
+    "title": "Colorado Proposition 123 First Round Funding Awards",
+    "researchDate": "2025-11-13",
+    "fiscalYear": "2023-2024",
+    "totalFirstRoundFunding": 160000000,
+    "sources": [
+      "Colorado OEDIT Press Releases",
+      "Colorado CHFA Announcements",
+      "Colorado DOLA Reports",
+      "Governor's Office Press Releases"
+    ],
+    "dataLimitations": "Complete recipient lists not fully available; some programs in preliminary approval stage"
+  },
+
+  "programStructure": {
+    "affordableHousingFinancingFund": {
+      "percentage": 60,
+      "administrator": "OEDIT/CHFA",
+      "programs": ["Land Banking", "Equity", "Concessionary Debt"]
+    },
+    "affordableHousingSupportFund": {
+      "percentage": 40,
+      "administrator": "DOLA",
+      "programs": ["Affordable Homeownership", "Homelessness Services", "Planning Capacity Grants"]
+    }
+  },
+
+  "ruralResortCounties": {
+    "designated": [
+      "Archuleta", "Chaffee", "Eagle", "Grand", "Gunnison",
+      "Hinsdale", "La Plata", "Lake", "Ouray", "Pitkin",
+      "Routt", "San Juan", "San Miguel", "Summit"
+    ],
+    "receivedAwards": [
+      "Archuleta", "Chaffee", "Eagle", "Grand", "Summit"
+    ],
+    "noAwards": [
+      "Gunnison", "Hinsdale", "La Plata", "Lake", "Ouray",
+      "Pitkin", "Routt", "San Juan", "San Miguel"
+    ]
+  },
+
+  "landBankingRound1": {
+    "totalAwarded": 25340000,
+    "recipients": 16,
+    "expectedUnits": 1380,
+    "announceDate": "2024-01",
+    "applications": {
+      "lettersOfIntent": 113,
+      "requestedAmount": 255000000,
+      "fullyInvited": 26
+    },
+    "awards": [
+      {
+        "recipient": "Archway Investment Corporation",
+        "project": "Gates Family Housing",
+        "location": "Denver",
+        "county": "Denver",
+        "region": "Front Range Urban",
+        "amount": 2000000
+      },
+      {
+        "recipient": "Blue Spruce Habitat for Humanity",
+        "project": "Affordable Homeownership",
+        "location": "Jefferson County",
+        "county": "Jefferson",
+        "region": "Front Range Urban",
+        "amount": 50000
+      },
+      {
+        "recipient": "Chaffee Housing Authority",
+        "project": "Alpine West",
+        "location": "Buena Vista",
+        "county": "Chaffee",
+        "region": "Rural Resort",
+        "amount": 1320000
+      },
+      {
+        "recipient": "City of Grand Junction",
+        "project": "Salt Flats",
+        "location": "Grand Junction",
+        "county": "Mesa",
+        "region": "Rural/Western Slope",
+        "amount": 2200000
+      },
+      {
+        "recipient": "City of Salida",
+        "project": "Salida Eastside Senior Living Apartments",
+        "location": "Salida",
+        "county": "Chaffee",
+        "region": "Rural",
+        "amount": 750000
+      },
+      {
+        "recipient": "Denver Cultural Property Trust",
+        "project": "Five Points Historic Cultural District Affordable Homes",
+        "location": "Denver",
+        "county": "Denver",
+        "region": "Front Range Urban",
+        "amount": 1975000
+      },
+      {
+        "recipient": "Elevation Community Land Trust",
+        "project": "Rural Southern CO Homeownership Portfolio",
+        "location": "Las Animas County",
+        "county": "Las Animas",
+        "region": "Rural",
+        "amount": 750000
+      },
+      {
+        "recipient": "Habitat for Humanity of Grand County",
+        "project": "Habitat Morris Project",
+        "location": "Granby",
+        "county": "Grand",
+        "region": "Rural Resort",
+        "amount": 1600000,
+        "units": 24
+      },
+      {
+        "recipient": "Housing Authority of the City of Aurora",
+        "project": "Walden 35 Phase II",
+        "location": "Aurora",
+        "county": "Arapahoe",
+        "region": "Front Range Urban",
+        "amount": 1450000
+      },
+      {
+        "recipient": "Housing Catalyst",
+        "project": "Village on Eastbrook",
+        "location": "Fort Collins",
+        "county": "Larimer",
+        "region": "Front Range Urban",
+        "amount": 1610000
+      },
+      {
+        "recipient": "Huerfano County Economic Development",
+        "project": "Northlands Subdivision of the Huajatolla Hills",
+        "location": "Walsenburg",
+        "county": "Huerfano",
+        "region": "Rural",
+        "amount": 225000
+      },
+      {
+        "recipient": "Langston Hughes Affordable Housing",
+        "project": "Aurora Family Apartments",
+        "location": "Aurora",
+        "county": "Arapahoe",
+        "region": "Front Range Urban",
+        "amount": 5000000
+      },
+      {
+        "recipient": "Town of Rangely",
+        "project": "Sagewood West Affordable Housing",
+        "location": "Rangely",
+        "county": "Rio Blanco",
+        "region": "Rural",
+        "amount": 240000
+      },
+      {
+        "recipient": "We Fortify",
+        "project": "Dignified Housing Village for At-Risk Young Adults",
+        "location": "Colorado Springs",
+        "county": "El Paso",
+        "region": "Front Range Urban",
+        "amount": 470000
+      }
+    ]
+  },
+
+  "landBankingRound2": {
+    "totalAwarded": 47994762,
+    "recipients": 21,
+    "expectedUnits": 1892,
+    "announceDate": "2025-05",
+    "awards": [
+      {
+        "recipient": "Boulder Housing Coalition",
+        "project": "1350 N Logan",
+        "location": "Denver",
+        "county": "Denver",
+        "region": "Front Range Urban",
+        "amount": 430000,
+        "units": 19
+      },
+      {
+        "recipient": "Broomfield Housing Alliance",
+        "project": "11795 Colmans Way",
+        "location": "Broomfield",
+        "county": "Broomfield",
+        "region": "Front Range Urban",
+        "amount": 3500000,
+        "units": 72
+      },
+      {
+        "recipient": "Commerce City Housing Authority",
+        "project": "The Foundry",
+        "location": "Commerce City",
+        "county": "Adams",
+        "region": "Front Range Urban",
+        "amount": 4750000,
+        "units": 120
+      },
+      {
+        "recipient": "Commun Denver",
+        "project": "Loretto Commons",
+        "location": "Denver",
+        "county": "Denver",
+        "region": "Front Range Urban",
+        "amount": 2500000,
+        "units": 173
+      },
+      {
+        "recipient": "Community Options Inc.",
+        "project": "Hilltop Apartments",
+        "location": "Montrose",
+        "county": "Montrose",
+        "region": "Rural",
+        "amount": 1250000,
+        "units": 50
+      },
+      {
+        "recipient": "West Colfax Lampstand",
+        "project": "Flats at Harlan",
+        "location": "Lakewood",
+        "county": "Jefferson",
+        "region": "Front Range Urban",
+        "amount": 400000,
+        "units": 9
+      },
+      {
+        "recipient": "Pikes Peak Real Estate Foundation",
+        "project": "Bradley Ridge Apartments",
+        "location": "Colorado Springs",
+        "county": "El Paso",
+        "region": "Front Range Urban",
+        "amount": 4850000,
+        "units": 336
+      },
+      {
+        "recipient": "Pagosa Springs Community Development Corporation",
+        "project": "Bonita Drive",
+        "location": "Pagosa Springs",
+        "county": "Archuleta",
+        "region": "Rural Resort",
+        "amount": 200000,
+        "units": 11
+      },
+      {
+        "recipient": "Metro Caring",
+        "project": "Rental Units",
+        "location": "Denver",
+        "county": "Denver",
+        "region": "Front Range Urban",
+        "amount": 3485000,
+        "units": 139
+      },
+      {
+        "recipient": "The NHP Foundation",
+        "project": "The Liora",
+        "location": "Denver",
+        "county": "Denver",
+        "region": "Front Range Urban",
+        "amount": 3850000,
+        "units": 158
+      },
+      {
+        "recipient": "City of Fruita",
+        "project": "Housing Development",
+        "location": "Fruita",
+        "county": "Mesa",
+        "region": "Rural/Western Slope",
+        "amount": 1500000,
+        "units": 100
+      }
+    ]
+  },
+
+  "equityProgram": {
+    "totalAwarded": 67500074,
+    "recipients": 11,
+    "expectedUnits": 1017,
+    "announceDate": "2024",
+    "awards": [
+      {
+        "recipient": "St. Louis Landing Phase I",
+        "location": "Fraser",
+        "county": "Grand",
+        "region": "Rural Resort",
+        "amount": 12900000,
+        "units": 129,
+        "amiRange": "30-120%",
+        "note": "Largest rural resort award; includes Early Childhood Learning Center"
+      },
+      {
+        "recipient": "Alpine Valley Apartments",
+        "location": "Monte Vista",
+        "county": "Rio Grande",
+        "region": "Rural",
+        "amount": 3700000,
+        "units": 26,
+        "amiRange": "80-120%"
+      }
+    ]
+  },
+
+  "concessionaryDebtProgram": {
+    "totalAwarded": 27053646,
+    "recipients": 6,
+    "expectedUnits": 728,
+    "announceDate": "2024",
+    "awards": [
+      {
+        "recipient": "4965 Washington Street",
+        "location": "Denver",
+        "county": "Denver",
+        "region": "Front Range Urban",
+        "amount": 6000000,
+        "units": 170,
+        "amiRange": "30-80%",
+        "note": "Includes Denver Public Library on ground floor"
+      },
+      {
+        "recipient": "The Stables",
+        "location": "Aurora",
+        "county": "Arapahoe",
+        "region": "Front Range Urban",
+        "amount": 3500000,
+        "units": 85,
+        "amiRange": "30-80%",
+        "note": "Expo Park neighborhood"
+      },
+      {
+        "recipient": "Creekside Flats",
+        "location": "Denver",
+        "county": "Denver",
+        "region": "Front Range Urban",
+        "amount": 4975000,
+        "units": 150
+      }
+    ]
+  },
+
+  "otherFirstRoundAwards": {
+    "grants": [
+      {
+        "recipient": "Town of Frisco",
+        "county": "Summit",
+        "region": "Rural Resort",
+        "amount": 5000000,
+        "type": "Land purchase grant"
+      },
+      {
+        "recipient": "Habitat for Humanity Vail Valley",
+        "county": "Eagle",
+        "region": "Rural Resort",
+        "amount": 650000,
+        "units": 9,
+        "location": "Gypsum"
+      }
+    ],
+    "equityInvestments": [
+      {
+        "recipient": "Craig",
+        "county": "Moffat",
+        "region": "Rural",
+        "amount": 2700000,
+        "units": 96,
+        "type": "Rental apartments"
+      }
+    ],
+    "concessionaryDebt": [
+      {
+        "recipient": "Keystone",
+        "county": "Summit",
+        "region": "Rural Resort",
+        "amount": 1380000,
+        "units": 47,
+        "project": "Wintergreen Ridge"
+      }
+    ]
+  },
+
+  "summaryStatistics": {
+    "landBankingRound1": {
+      "frontRangeUrban": {
+        "totalAmount": 14285000,
+        "percentage": 56.4,
+        "projectCount": 7
+      },
+      "ruralResort": {
+        "totalAmount": 5355000,
+        "percentage": 21.1,
+        "projectCount": 5
+      },
+      "rural": {
+        "totalAmount": 3415000,
+        "percentage": 13.5,
+        "projectCount": 4
+      }
+    },
+    "landBankingRound2": {
+      "frontRangeUrban": {
+        "totalAmount": 23765000,
+        "percentage": 49.5,
+        "projectCount": 8
+      },
+      "ruralResort": {
+        "totalAmount": 200000,
+        "percentage": 0.4,
+        "projectCount": 1
+      },
+      "rural": {
+        "totalAmount": 2750000,
+        "percentage": 5.7,
+        "projectCount": 2
+      }
+    },
+    "overallFirstRound": {
+      "ruralAndResortCounties": {
+        "totalAmount": 26900000,
+        "percentage": 16.8,
+        "source": "Of $160M available, $26.9M to rural and resort counties"
+      }
+    },
+    "averageAwardSize": {
+      "frontRangeUrban": {
+        "min": 2000000,
+        "max": 5000000,
+        "typical": 3500000
+      },
+      "ruralResort": {
+        "min": 200000,
+        "max": 2000000,
+        "typical": 1000000,
+        "exception": {
+          "project": "Fraser St. Louis Landing",
+          "amount": 12900000,
+          "note": "Largest single rural resort award via Equity Program"
+        }
+      }
+    }
+  },
+
+  "ruralResortCountyAwards": {
+    "Archuleta": {
+      "totalAwards": 200000,
+      "projects": [
+        {
+          "recipient": "Pagosa Springs CDC",
+          "amount": 200000,
+          "program": "Land Banking Round 2",
+          "units": 11
+        }
+      ]
+    },
+    "Chaffee": {
+      "totalAwards": 2070000,
+      "projects": [
+        {
+          "recipient": "Chaffee Housing Authority",
+          "amount": 1320000,
+          "program": "Land Banking Round 1"
+        },
+        {
+          "recipient": "City of Salida",
+          "amount": 750000,
+          "program": "Land Banking Round 1"
+        }
+      ]
+    },
+    "Eagle": {
+      "totalAwards": 650000,
+      "projects": [
+        {
+          "recipient": "Habitat for Humanity Vail Valley",
+          "amount": 650000,
+          "program": "Development Grant",
+          "units": 9
+        }
+      ]
+    },
+    "Grand": {
+      "totalAwards": 14500000,
+      "projects": [
+        {
+          "recipient": "Habitat for Humanity Grand County",
+          "amount": 1600000,
+          "program": "Land Banking Round 1",
+          "units": 24
+        },
+        {
+          "recipient": "St. Louis Landing (Fraser)",
+          "amount": 12900000,
+          "program": "Equity",
+          "units": 129
+        }
+      ]
+    },
+    "Gunnison": {
+      "totalAwards": 0,
+      "projects": []
+    },
+    "Hinsdale": {
+      "totalAwards": 0,
+      "projects": []
+    },
+    "La Plata": {
+      "totalAwards": 0,
+      "projects": [],
+      "note": "Opted in but no awards identified"
+    },
+    "Lake": {
+      "totalAwards": 0,
+      "projects": []
+    },
+    "Ouray": {
+      "totalAwards": 0,
+      "projects": []
+    },
+    "Pitkin": {
+      "totalAwards": 114000,
+      "projects": [
+        {
+          "recipient": "City of Aspen",
+          "amount": 114000,
+          "program": "Local Planning Capacity Grant"
+        }
+      ]
+    },
+    "Routt": {
+      "totalAwards": 0,
+      "projects": [],
+      "note": "Eligible; Steamboat Springs and Routt County mentioned in reports but no specific awards"
+    },
+    "San Juan": {
+      "totalAwards": 0,
+      "projects": []
+    },
+    "San Miguel": {
+      "totalAwards": 0,
+      "projects": [],
+      "note": "Opted in but no awards identified"
+    },
+    "Summit": {
+      "totalAwards": 6380000,
+      "projects": [
+        {
+          "recipient": "Town of Frisco",
+          "amount": 5000000,
+          "program": "Land Purchase Grant"
+        },
+        {
+          "recipient": "Keystone",
+          "amount": 1380000,
+          "program": "Concessionary Debt",
+          "units": 47
+        }
+      ]
+    }
+  },
+
+  "disparityAnalysis": {
+    "structuralChallenges": [
+      "Rural governments have less funding for application development",
+      "Fewer staff with grant writing expertise",
+      "Limited ability to provide matching funds",
+      "Smaller organizational capacity",
+      "Higher per-unit construction costs in remote locations",
+      "Smaller populations reduce project economic viability"
+    ],
+    "amiIssues": [
+      "Small populations with extreme income disparities",
+      "Wealthy second-home owners skew median income upward",
+      "Higher local AMI limits make qualifying residents ineligible",
+      "Cost of living much higher than state/national averages"
+    ],
+    "demandVsSupply": {
+      "lettersOfIntent": 113,
+      "requestedFunding": 255000000,
+      "availableFunding": 25340000,
+      "selectionRate": 14.2,
+      "note": "Overwhelming demand creates intense competition favoring ready urban projects"
+    },
+    "competitionDisadvantages": [
+      "Selection criteria favor readiness to proceed",
+      "Urban areas have more prepared projects",
+      "Geographic distribution considered but not primary",
+      "Financial feasibility harder to demonstrate in rural areas"
+    ]
+  },
+
+  "keyQuotes": [
+    {
+      "source": "Peter Lifari, Maiker Housing Partners",
+      "quote": "The challenge is that over 230 local governments have opted in, and so that $160 million or $320 million goes fast, so it's far over prescribed for what the demand is requesting."
+    },
+    {
+      "source": "Brittany Dixon, Club 20 Executive Director",
+      "quote": "Club 20 opposed Proposition 123 on the ballot due to structural disadvantages for rural areas."
+    },
+    {
+      "source": "Yampa Valley Housing Authority",
+      "quote": "It's a really direct benefit in that it allows us to sell units at a lower price point."
+    },
+    {
+      "source": "Common Sense Institute Analysis",
+      "quote": "Proposition 123 is only as successful as the number of cities and counties who decide to opt into the program."
+    }
+  ],
+
+  "dataResources": {
+    "dashboard": "CDOLA maintains interactive map showing per-county and per-capita awards",
+    "spreadsheet": "Companion spreadsheet updated quarterly (through September 2025)",
+    "contact": "dola_prop123support@state.co.us",
+    "url": "cdola.colorado.gov/prop123-reports-and-performance-measures"
+  }
+}

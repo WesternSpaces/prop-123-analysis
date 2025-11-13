@@ -5,6 +5,7 @@ import { AMIProblem } from '@/components/sections/AMIProblem';
 import { CommunityStories } from '@/components/sections/CommunityStories';
 import { RuralResortExemption } from '@/components/sections/RuralResortExemption';
 import { HousingCrisisData } from '@/components/sections/HousingCrisisData';
+import { FundingDisparity } from '@/components/sections/FundingDisparity';
 import { DataAnalysis } from '@/components/sections/DataAnalysis';
 import { PolicyRecommendations } from '@/components/sections/PolicyRecommendations';
 import { Footer } from '@/components/Footer';
@@ -19,6 +20,7 @@ export default function Home() {
       <CommunityStories />
       <RuralResortExemption />
       <HousingCrisisData />
+      <FundingDisparity />
       <DataAnalysis />
       <PolicyRecommendations />
       <Footer />

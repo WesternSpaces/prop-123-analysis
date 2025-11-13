@@ -9,6 +9,7 @@ const navItems = [
   { label: 'Community Stories', href: '#stories' },
   { label: 'Rural Resort Exemption', href: '#exemption' },
   { label: 'Housing Crisis Data', href: '#housing-crisis-data' },
+  { label: 'Funding Disparity', href: '#funding-disparity' },
   { label: 'Funding Analysis', href: '#data' },
   { label: 'Policy Solutions', href: '#solutions' },
 ];
