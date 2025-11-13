@@ -11,10 +11,10 @@ export function HousingCrisisData() {
     .filter(c => c.seasonalRecreational)
     .map(county => ({
       county: county.county,
-      seasonal: ((county.seasonalRecreational! / county.totalHousingUnits) * 100).toFixed(1),
-      available: (((county.vacantForRent || 0) + (county.vacantForSale || 0)) / county.totalHousingUnits * 100).toFixed(1),
+      seasonal: parseFloat(((county.seasonalRecreational! / county.totalHousingUnits) * 100).toFixed(1)),
+      available: parseFloat((((county.vacantForRent || 0) + (county.vacantForSale || 0)) / county.totalHousingUnits * 100).toFixed(1)),
     }))
-    .sort((a, b) => parseFloat(b.seasonal) - parseFloat(a.seasonal));
+    .sort((a, b) => b.seasonal - a.seasonal);
 
   // Cost Burden - Severe housing cost burden (50%+)
   const costBurdenData = RURAL_RESORT_COUNTIES_DATA
