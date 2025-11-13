@@ -260,9 +260,27 @@ export function FundingDisparity() {
             system is—if it takes this much effort for a relatively well-resourced county, what chance do smaller jurisdictions have?
           </p>
           <div className="bg-white rounded p-4 mt-4">
-            <p className="text-red-900 font-bold text-sm">
+            <p className="text-red-900 font-bold text-sm mb-3">
               Result: 11 of 12 rural resort counties have NOT successfully petitioned, and 9 of 12 received ZERO development funding.
               The exemption exists on paper, but functions as another insurmountable barrier in practice.
+            </p>
+          </div>
+
+          <div className="bg-yellow-100 border-l-4 border-yellow-600 p-4 mt-4">
+            <h6 className="font-bold text-yellow-900 mb-2">Counties That Tried—and Gave Up</h6>
+            <p className="text-yellow-900 text-sm mb-2">
+              Multiple jurisdictions started the petition process but <strong>withdrew their applications</strong> before getting a decision,
+              demonstrating how the requirements are simply too burdensome:
+            </p>
+            <ul className="text-yellow-900 text-sm space-y-1 ml-4">
+              <li><strong>• Chaffee County</strong> - Withdrew petition despite county commission approval to submit</li>
+              <li><strong>• Town of Vail (Eagle County)</strong> - Withdrew petition</li>
+              <li><strong>• Town of Fraser (Grand County)</strong> - Withdrew petition</li>
+              <li><strong>• Town of Hayden (Routt County)</strong> - Withdrew petition</li>
+              <li><strong>• City of Ouray</strong> - Withdrew petition</li>
+            </ul>
+            <p className="text-yellow-900 text-xs mt-3 italic">
+              Source: Colorado Department of Local Affairs Rural Resort Income Limit Petition Process tracking
             </p>
           </div>
         </div>
