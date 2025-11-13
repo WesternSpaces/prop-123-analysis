@@ -162,23 +162,23 @@ export const PETITION_REQUIREMENTS = [
 export const WHY_AMI_FAILS_IN_RESORT_AREAS = [
   {
     reason: 'Income Data Distortion',
-    explanation: 'AMI calculations include investment earnings and retirement income, not just wages. In resort communities with extreme wealth disparities, high earners skew the median upward.',
-    example: 'Most visitors and newcomers earn over $150,000 (many over $300,000), while 60% of locals earn less than $150,000, typically $60,000-$100,000',
+    explanation: 'AMI calculations include investment earnings and retirement income, not just wages. In resort communities with extreme wealth disparities, wealthy second-home owners skew the median upward, creating artificially high AMI that doesn\'t reflect actual worker wages.',
+    example: 'Pitkin County (Aspen) AMI: $100,318, but this includes retirees and wealthy investors. Actual teachers, nurses, and service workers earn $60K-$90K and cannot afford $1.1M median homes',
   },
   {
-    reason: 'The "Missing Middle" Problem',
-    explanation: '60-100% AMI limits exclude essential workforce members who earn "too much" to qualify but not enough to afford market-rate housing.',
-    example: 'Teachers, nurses, police, firefighters, service workers, and even well-paid professionals cannot afford housing in their communities',
+    reason: 'The "Missing Middle" Funding Gap',
+    explanation: 'Workers earning 100-140% AMI are excluded from ownership programs despite being unable to afford market-rate homes. Prop 123\'s 100% AMI ownership limit means counties can\'t get funding to build homes these workers can afford.',
+    example: 'County employees, teachers, nurses earning $80K-$120K (100-140% AMI) are locked out: too high for Prop 123 ownership programs, but can\'t afford $600K-$1M market homes',
   },
   {
-    reason: 'Volatile Income Data',
-    explanation: 'Rapid AMI fluctuations create moving targets that don\'t reflect actual wage growth for workers.',
-    example: 'Routt County: 50% AMI jump 2020-2025 vs. only 11% growth 2015-2020',
+    reason: 'Rental Limits Miss Workforce Reality',
+    explanation: 'The 60% AMI rental limit targets households earning around $48K-$63K in most resort counties, but the majority of essential workers earn more. Counties can\'t access funding to build rentals for 80-100% AMI workers.',
+    example: 'Summit County service workers, retail managers, government employees typically earn $70K-$90K (80-100% AMI)—above 60% rental limit but still can\'t afford $1,800+/month market rents',
   },
   {
-    reason: 'Vacant Units Despite Need',
-    explanation: 'Units built to meet AMI limits sit vacant because the limits don\'t match actual workforce income distribution.',
-    example: 'Breckenridge: 120% AMI units vacant. Aspen: 50% AMI units can\'t be filled because few jobs pay that little',
+    reason: 'Mismatch Creates Vacant Units',
+    explanation: 'When counties do build at AMI limits, units sit vacant because the restrictions don\'t match actual workforce wages. Meanwhile, workers who could afford slightly higher rates have nowhere to go.',
+    example: 'Breckenridge units built at 60% AMI sat vacant (workforce earns more), while 120% AMI units also stayed empty (county couldn\'t get Prop 123 funding for that income level, had to use other sources)',
   },
 ];
 
