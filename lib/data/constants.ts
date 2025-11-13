@@ -176,9 +176,9 @@ export const WHY_AMI_FAILS_IN_RESORT_AREAS = [
     example: 'Summit County service workers, retail managers, government employees typically earn $70K-$90K (80-100% AMI)—above 60% rental limit but still can\'t afford $1,800+/month market rents',
   },
   {
-    reason: 'Mismatch Creates Vacant Units',
-    explanation: 'When counties do build at AMI limits, units sit vacant because the restrictions don\'t match actual workforce wages. Meanwhile, workers who could afford slightly higher rates have nowhere to go.',
-    example: 'Breckenridge units built at 60% AMI sat vacant (workforce earns more), while 120% AMI units also stayed empty (county couldn\'t get Prop 123 funding for that income level, had to use other sources)',
+    reason: 'Construction Costs Driven by High Cost of Living',
+    explanation: 'High cost of living in resort areas drives up construction costs—workers need higher wages to afford housing, materials cost more to transport, contractors charge premium rates. This creates a larger capital gap that AMI-restricted Prop 123 funding can\'t bridge.',
+    example: 'Construction workers in Aspen/Vail need $80K-$120K to afford local housing, vs. $50K-$70K in Front Range. Per-unit construction costs run 30-50% higher, but counties can only access Prop 123 funding tied to 60%/100% AMI rents/prices that don\'t cover the actual development costs',
   },
 ];
 
