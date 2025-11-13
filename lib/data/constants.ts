@@ -190,10 +190,10 @@ export const POLICY_RECOMMENDATIONS = [
     precedent: 'HB23-1304 already recognizes rural resort counties as a distinct category requiring different treatment.',
   },
   {
-    title: 'Simplify Petition Process',
-    description: 'Eliminate the weighted average requirement; allow petitions if community can demonstrate ANY significant housing need above current limits.',
-    rationale: 'The weighted average creates a mathematical catch-22 that prevents communities with genuine workforce housing crises from qualifying.',
-    impact: 'Would allow communities like Steamboat Springs to address missing middle problem without gaming the numbers.',
+    title: 'Simplify Petition Process for Other Communities',
+    description: 'For counties outside the rural resort designation, eliminate the weighted average requirement; allow petitions if community can demonstrate ANY significant housing need above current limits.',
+    rationale: 'The weighted average creates a mathematical catch-22 that prevents communities with genuine workforce housing crises from qualifying. This reform would help non-rural-resort counties that face similar (but less extreme) affordability challenges.',
+    impact: 'Would benefit mountain communities not classified as "rural resort" but still experiencing workforce housing shortages and AMI distortion from wealthy residents.',
   },
   {
     title: 'Use Local Wages Instead of AMI',
