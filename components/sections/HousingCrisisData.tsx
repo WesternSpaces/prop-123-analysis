@@ -83,10 +83,10 @@ export function HousingCrisisData() {
           leaving only <strong>3.9% of total housing</strong> actually available for workers to buy or rent.
         </p>
         <ResponsiveContainer width="100%" height={500}>
-          <BarChart data={vacancyBreakdownData} layout="horizontal">
+          <BarChart data={vacancyBreakdownData}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis type="number" label={{ value: 'Percent of Total Housing', position: 'bottom' }} />
-            <YAxis type="category" dataKey="county" width={80} />
+            <XAxis dataKey="county" angle={-45} textAnchor="end" height={120} />
+            <YAxis label={{ value: 'Percent of Total Housing', angle: -90, position: 'insideLeft' }} />
             <Tooltip />
             <Legend />
             <Bar dataKey="seasonal" name="Seasonal/Recreational (Unavailable)" fill="#ef4444" stackId="a" />
