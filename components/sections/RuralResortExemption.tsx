@@ -17,32 +17,40 @@ export function RuralResortExemption() {
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-6">
           {RURAL_RESORT_COUNTIES_DATA
-            .filter(c => !['Hinsdale', 'Lake'].includes(c.county)) // Filter to official 12 rural resort counties
-            .sort((a, b) => b.vacancyRate - a.vacancyRate)
+            .filter(c => !['Hinsdale', 'Lake'].includes(c.county) && c.medianHomeValue && c.medianIncome) // Filter to official 12 rural resort counties with data
+            .sort((a, b) => {
+              const ratioA = (a.medianHomeValue || 0) / (a.medianIncome || 1);
+              const ratioB = (b.medianHomeValue || 0) / (b.medianIncome || 1);
+              return ratioB - ratioA;
+            })
             .map((county) => {
-              const isHighVacancy = county.vacancyRate > 50;
-              const isVeryHighSeasonal = county.seasonalRecreationalPercent && county.seasonalRecreationalPercent > 85;
+              const ratio = (county.medianHomeValue || 0) / (county.medianIncome || 1);
+              const isSevere = ratio > 8; // Over 8 years of income
+              const isHigh = ratio > 6; // Over 6 years of income
 
               return (
                 <div
                   key={county.county}
                   className={`rounded px-3 py-2 text-sm ${
-                    isHighVacancy
+                    isSevere
                       ? 'bg-red-900/30 border border-red-500'
+                      : isHigh
+                      ? 'bg-orange-900/30 border border-orange-500'
                       : 'bg-slate-900/50'
                   }`}
                 >
-                  <div className={`font-semibold ${isHighVacancy ? 'text-red-200' : 'text-slate-200'}`}>
+                  <div className={`font-semibold ${isSevere ? 'text-red-200' : isHigh ? 'text-orange-200' : 'text-slate-200'}`}>
                     {county.county}
                   </div>
                   <div className="text-xs text-slate-400 mt-1">
-                    {county.vacancyRate.toFixed(1)}% vacant
+                    ${(county.medianHomeValue! / 1000).toFixed(0)}K median home
                   </div>
-                  {county.seasonalRecreationalPercent && (
-                    <div className={`text-xs mt-0.5 ${isVeryHighSeasonal ? 'text-red-300 font-semibold' : 'text-slate-500'}`}>
-                      {county.seasonalRecreationalPercent.toFixed(1)}% seasonal
-                    </div>
-                  )}
+                  <div className="text-xs text-slate-400 mt-0.5">
+                    ${(county.medianIncome! / 1000).toFixed(0)}K median income
+                  </div>
+                  <div className={`text-xs mt-0.5 font-semibold ${isSevere ? 'text-red-300' : isHigh ? 'text-orange-300' : 'text-slate-300'}`}>
+                    {ratio.toFixed(1)}x income ratio
+                  </div>
                 </div>
               );
             })}
@@ -51,32 +59,44 @@ export function RuralResortExemption() {
         <div className="grid md:grid-cols-3 gap-4 mb-4 p-4 bg-slate-900/50 rounded">
           <div className="text-center">
             <div className="text-3xl font-bold text-red-400">
-              {(RURAL_RESORT_COUNTIES_DATA
-                .filter(c => !['Hinsdale', 'Lake'].includes(c.county))
-                .reduce((sum, c) => sum + c.vacancyRate, 0) / 12).toFixed(1)}%
+              {(() => {
+                const countiesWithData = RURAL_RESORT_COUNTIES_DATA
+                  .filter(c => !['Hinsdale', 'Lake'].includes(c.county) && c.medianHomeValue && c.medianIncome);
+                const avgRatio = countiesWithData.reduce((sum, c) =>
+                  sum + (c.medianHomeValue! / c.medianIncome!), 0) / countiesWithData.length;
+                return avgRatio.toFixed(1);
+              })()}x
             </div>
-            <div className="text-xs text-slate-400 mt-1">Average Vacancy Rate</div>
+            <div className="text-xs text-slate-400 mt-1">Avg Home Price to Income Ratio</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-orange-400">
-              {(RURAL_RESORT_COUNTIES_DATA
-                .filter(c => !['Hinsdale', 'Lake'].includes(c.county) && c.seasonalRecreationalPercent)
-                .reduce((sum, c) => sum + (c.seasonalRecreationalPercent || 0), 0) / 12).toFixed(1)}%
+              ${(() => {
+                const countiesWithData = RURAL_RESORT_COUNTIES_DATA
+                  .filter(c => !['Hinsdale', 'Lake'].includes(c.county) && c.medianHomeValue);
+                const avgHome = countiesWithData.reduce((sum, c) =>
+                  sum + (c.medianHomeValue || 0), 0) / countiesWithData.length;
+                return (avgHome / 1000).toFixed(0);
+              })()}K
             </div>
-            <div className="text-xs text-slate-400 mt-1">Avg Seasonal/Recreational</div>
+            <div className="text-xs text-slate-400 mt-1">Avg Median Home Value</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-blue-400">
-              {RURAL_RESORT_COUNTIES_DATA
-                .filter(c => !['Hinsdale', 'Lake'].includes(c.county))
-                .reduce((sum, c) => c.totalHousingUnits + sum, 0).toLocaleString()}
+              ${(() => {
+                const countiesWithData = RURAL_RESORT_COUNTIES_DATA
+                  .filter(c => !['Hinsdale', 'Lake'].includes(c.county) && c.medianIncome);
+                const avgIncome = countiesWithData.reduce((sum, c) =>
+                  sum + (c.medianIncome || 0), 0) / countiesWithData.length;
+                return (avgIncome / 1000).toFixed(0);
+              })()}K
             </div>
-            <div className="text-xs text-slate-400 mt-1">Total Housing Units</div>
+            <div className="text-xs text-slate-400 mt-1">Avg Median Income</div>
           </div>
         </div>
 
         <p className="text-slate-300 text-sm mb-2">
-          <strong className="text-red-300">The Crisis:</strong> Despite an average vacancy rate of 36%, most vacant homes are seasonal/recreational properties unavailable to the local workforce. Counties with over 50% vacancy (highlighted in red) face the most severe challenges.
+          <strong className="text-red-300">The Affordability Crisis:</strong> With an average home-to-income ratio of 7.0x, workers in these counties would need 7 years of their entire household income (with zero expenses) to buy a median home. Counties with ratios over 8x (highlighted in red) face the most severe challenges—far exceeding the 3x ratio considered affordable.
         </p>
         <p className="text-slate-300 text-sm">
           <strong>Program Scope:</strong> The exemption applies only to Land Banking, Equity, and Concessionary Debt programs, and is valid for the current 3-year funding cycle.
