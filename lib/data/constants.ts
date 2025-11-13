@@ -100,22 +100,34 @@ export const FUNDING_RESULTS = {
       applications: 38,
       requested: 113, // million
       available: 32, // million
+      awarded: 27.05, // million
+      unitsCreated: 728,
+      recipients: 6,
     },
     landBanking: {
-      applications: 113,
-      requested: 255, // million
-      available: 24.5, // million
+      applications: 113, // Letters of Intent
+      fullApplications: 21,
+      requested: 255, // million (from Letters of Intent)
+      available: 25.34, // million
+      awarded: 25.34, // million
+      unitsCreated: 1380,
+      recipients: 16,
     },
-    ruralResortCounties: {
-      totalAwarded: 26.9, // million
-      unitsCreated: 685,
+    equityProgram: {
+      applications: 36,
+      requested: 313, // million
+      awarded: 39.39, // million
+      unitsCreated: 628,
+      recipients: 6,
     },
   },
   notableAwards: [
-    { location: 'Frisco', amount: 5.0, purpose: 'Land acquisition' },
-    { location: 'Craig', amount: 2.7, purpose: '96 rental apartments' },
-    { location: 'Grand County (Habitat)', amount: 1.6, purpose: 'Habitat for Humanity projects' },
-    { location: 'Keystone', amount: 1.38, purpose: '47 rental units' },
+    { location: 'Frisco', amount: 5.0, purpose: 'Land acquisition', program: 'Land Banking' },
+    { location: 'Craig (Woodbury Park)', amount: 2.7, purpose: 'Affordable apartments', program: 'Multiple' },
+    { location: 'Grand County (Habitat)', amount: 1.6, purpose: 'Habitat for Humanity projects', program: 'Land Banking' },
+    { location: 'Keystone', amount: 1.38, purpose: '47 rental units', program: 'Land Banking' },
+    { location: 'Denver (Grove Apts)', amount: 10.5, purpose: 'Affordable units', program: 'Equity' },
+    { location: 'Fort Collins (302 Conifer)', amount: 8.2, purpose: 'Affordable units', program: 'Equity' },
   ],
 };
 

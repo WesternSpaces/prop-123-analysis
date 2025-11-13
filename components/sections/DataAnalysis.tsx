@@ -6,10 +6,23 @@ import { FUNDING_RESULTS, RURAL_RESORT_COUNTIES } from '@/lib/data/constants';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 
 export function DataAnalysis() {
-  // Funding gap data
+  // Funding gap data - showing requested vs awarded
   const fundingGapData = [
-    { program: 'Concessionary Debt', requested: 113, available: 32 },
-    { program: 'Land Banking', requested: 255, available: 24.5 },
+    {
+      program: 'Concessionary Debt',
+      requested: FUNDING_RESULTS.firstRound.concessionaryDebt.requested,
+      awarded: FUNDING_RESULTS.firstRound.concessionaryDebt.awarded
+    },
+    {
+      program: 'Land Banking',
+      requested: FUNDING_RESULTS.firstRound.landBanking.requested,
+      awarded: FUNDING_RESULTS.firstRound.landBanking.awarded
+    },
+    {
+      program: 'Equity Program',
+      requested: FUNDING_RESULTS.firstRound.equityProgram.requested,
+      awarded: FUNDING_RESULTS.firstRound.equityProgram.awarded
+    },
   ];
 
   // Notable awards
@@ -37,18 +50,28 @@ export function DataAnalysis() {
     >
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         <Card title="First Round Funding Results">
-          <div className="mb-4">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-slate-700">Rural Resort Counties Awarded:</span>
-              <span className="text-2xl font-bold text-blue-600">
-                ${FUNDING_RESULTS.firstRound.ruralResortCounties.totalAwarded}M
-              </span>
+          <div className="mb-4 space-y-3">
+            <div>
+              <div className="text-sm font-semibold text-slate-600 mb-1">Total Units Created (All Programs)</div>
+              <div className="text-3xl font-bold text-blue-600">
+                {FUNDING_RESULTS.firstRound.landBanking.unitsCreated +
+                 FUNDING_RESULTS.firstRound.concessionaryDebt.unitsCreated +
+                 FUNDING_RESULTS.firstRound.equityProgram.unitsCreated}
+              </div>
             </div>
-            <div className="flex justify-between items-center">
-              <span className="text-slate-700">Affordable Units Created:</span>
-              <span className="text-2xl font-bold text-green-600">
-                {FUNDING_RESULTS.firstRound.ruralResortCounties.unitsCreated}
-              </span>
+            <div className="grid grid-cols-3 gap-2 text-center">
+              <div className="bg-blue-50 rounded p-2">
+                <div className="text-xs text-slate-600">Land Banking</div>
+                <div className="text-lg font-bold text-blue-600">{FUNDING_RESULTS.firstRound.landBanking.unitsCreated}</div>
+              </div>
+              <div className="bg-green-50 rounded p-2">
+                <div className="text-xs text-slate-600">Concessionary</div>
+                <div className="text-lg font-bold text-green-600">{FUNDING_RESULTS.firstRound.concessionaryDebt.unitsCreated}</div>
+              </div>
+              <div className="bg-purple-50 rounded p-2">
+                <div className="text-xs text-slate-600">Equity</div>
+                <div className="text-lg font-bold text-purple-600">{FUNDING_RESULTS.firstRound.equityProgram.unitsCreated}</div>
+              </div>
             </div>
           </div>
           <div className="bg-slate-50 rounded p-4 mt-4">
@@ -69,27 +92,30 @@ export function DataAnalysis() {
           </div>
         </Card>
 
-        <Card title="The Funding Gap: Demand vs. Supply">
+        <Card title="The Funding Gap: Demand vs. Awards">
           <p className="text-slate-700 mb-4">
-            First-round applications revealed dramatic gaps between community needs and available funding:
+            First-round applications revealed dramatic gaps between community needs and actual awards:
           </p>
-          <ResponsiveContainer width="100%" height={350}>
+          <ResponsiveContainer width="100%" height={400}>
             <BarChart data={fundingGapData}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="program" />
+              <XAxis dataKey="program" angle={-15} textAnchor="end" height={80} />
               <YAxis label={{ value: 'Millions ($)', angle: -90, position: 'insideLeft' }} />
               <Tooltip />
               <Legend />
               <Bar dataKey="requested" name="Requested" fill="#ef4444" />
-              <Bar dataKey="available" name="Available" fill="#10b981" />
+              <Bar dataKey="awarded" name="Awarded" fill="#10b981" />
             </BarChart>
           </ResponsiveContainer>
           <div className="mt-4 space-y-2 text-sm text-slate-600">
             <p>
-              <strong>Concessionary Debt:</strong> 38 applications requesting $113M; only $32M available
+              <strong>Concessionary Debt:</strong> {FUNDING_RESULTS.firstRound.concessionaryDebt.applications} applications requesting ${FUNDING_RESULTS.firstRound.concessionaryDebt.requested}M; ${FUNDING_RESULTS.firstRound.concessionaryDebt.awarded}M awarded ({FUNDING_RESULTS.firstRound.concessionaryDebt.recipients} projects)
             </p>
             <p>
-              <strong>Land Banking:</strong> 113 applications requesting $255M; only $24.5M available
+              <strong>Land Banking:</strong> {FUNDING_RESULTS.firstRound.landBanking.applications} letters of intent requesting ${FUNDING_RESULTS.firstRound.landBanking.requested}M; ${FUNDING_RESULTS.firstRound.landBanking.awarded}M awarded ({FUNDING_RESULTS.firstRound.landBanking.recipients} projects)
+            </p>
+            <p>
+              <strong>Equity Program:</strong> {FUNDING_RESULTS.firstRound.equityProgram.applications} applications requesting ${FUNDING_RESULTS.firstRound.equityProgram.requested}M; ${FUNDING_RESULTS.firstRound.equityProgram.awarded}M awarded ({FUNDING_RESULTS.firstRound.equityProgram.recipients} projects)
             </p>
           </div>
         </Card>
