@@ -166,7 +166,103 @@ export function FundingDisparity() {
           <div className="bg-green-50 rounded p-4 border-l-4 border-green-500">
             <div className="font-bold text-green-900 mb-2">Significant Funding (2 counties)</div>
             <p className="text-green-700 text-xs">
-              Only Grand ($14.5M) and Summit ($6.38M) received substantial awards. Summit is the only county that successfully petitioned for the rural resort exemption.
+              Only Grand ($14.5M) and Summit ($6.38M) received substantial awards. Summit is the only county that successfully petitioned for the rural resort exemption—but at enormous cost (see below).
+            </p>
+          </div>
+        </div>
+      </Card>
+
+      {/* Summit County Success Story - The Real Cost */}
+      <Card title="The 'Success Story': Summit County's Costly Petition" className="mb-12">
+        <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
+          <h4 className="font-bold text-yellow-900 mb-3 flex items-center gap-2">
+            <span className="text-2xl">⚠️</span>
+            Summit County is held up as proof the exemption works—but the reality is more complicated
+          </h4>
+          <p className="text-yellow-800 text-sm mb-3">
+            Summit County is the <strong>only rural resort county (out of 12)</strong> to successfully petition for the exemption allowing higher AMI limits.
+            While this is technically a "success," the process required extraordinary resources that most rural counties simply don't have.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-slate-50 rounded-lg p-6">
+            <h5 className="font-bold text-slate-900 mb-3">What Summit Had to Do:</h5>
+            <ul className="space-y-2 text-sm text-slate-700">
+              <li className="flex items-start">
+                <span className="text-blue-600 font-bold mr-2">•</span>
+                <span><strong>Comprehensive Housing Needs Assessment:</strong> Multi-month study using Colorado State Demographer data, analyzing needs by AMI bracket (not just current residents)</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 font-bold mr-2">•</span>
+                <span><strong>Extensive Documentation Package:</strong> Justification narratives, project examples, impact analysis proving why alternative funding sources were insufficient</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 font-bold mr-2">•</span>
+                <span><strong>Weighted Average AMI Calculations:</strong> Complex mathematical demonstrations that average housing need exceeded current eligibility thresholds</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 font-bold mr-2">•</span>
+                <span><strong>Multiple Stakeholder Meetings:</strong> Coordination with county commissioners, housing authorities, developers, DOLA staff, community members</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 font-bold mr-2">•</span>
+                <span><strong>30-Day Public Comment Period:</strong> Response to public feedback and potential revisions</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 font-bold mr-2">•</span>
+                <span><strong>Estimated Timeline:</strong> 6+ months from start to approval</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-slate-50 rounded-lg p-6">
+            <h5 className="font-bold text-slate-900 mb-3">What This Required:</h5>
+            <ul className="space-y-2 text-sm text-slate-700">
+              <li className="flex items-start">
+                <span className="text-red-600 font-bold mr-2">✓</span>
+                <span><strong>Dedicated Housing Staff:</strong> Full-time employees with expertise in housing policy, AMI calculations, and grant writing</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-red-600 font-bold mr-2">✓</span>
+                <span><strong>Consultant Budget:</strong> Professional demographers, housing consultants, and analysts to complete the needs assessment</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-red-600 font-bold mr-2">✓</span>
+                <span><strong>Legal/Policy Expertise:</strong> Understanding of HB23-1304 requirements, DOLA regulations, and petition procedures</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-red-600 font-bold mr-2">✓</span>
+                <span><strong>Institutional Capacity:</strong> Ability to coordinate multiple meetings, synthesize data, and manage multi-month processes</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-red-600 font-bold mr-2">✓</span>
+                <span><strong>Financial Resources:</strong> Estimated tens of thousands of dollars in staff time and consultant fees</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-red-600 font-bold mr-2">✓</span>
+                <span><strong>Political Capital:</strong> County commissioner buy-in and willingness to invest resources with no guarantee of success</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-6 bg-red-50 border-2 border-red-500 rounded-lg p-6">
+          <h5 className="font-bold text-red-900 mb-3 text-lg">The Real Barrier: Most Counties Can't Do This</h5>
+          <p className="text-red-800 text-sm mb-3">
+            Summit County has a population of ~32,000 and a relatively robust tax base from tourism. Smaller counties like
+            Ouray (pop. 5,000), San Juan (pop. 700), and Hinsdale (pop. 800) have <strong>limited staff who wear multiple hats</strong>—
+            the same person might be handling planning, building permits, AND trying to navigate a complex housing petition.
+          </p>
+          <p className="text-red-800 text-sm mb-3">
+            <strong>The petition process itself becomes a barrier to entry.</strong> Counties that need the exemption most are often the
+            smallest and least equipped to navigate the bureaucratic requirements. Summit's "success" actually proves how difficult the
+            system is—if it takes this much effort for a relatively well-resourced county, what chance do smaller jurisdictions have?
+          </p>
+          <div className="bg-white rounded p-4 mt-4">
+            <p className="text-red-900 font-bold text-sm">
+              Result: 11 of 12 rural resort counties have NOT successfully petitioned, and 9 of 12 received ZERO development funding.
+              The exemption exists on paper, but functions as another insurmountable barrier in practice.
             </p>
           </div>
         </div>
@@ -186,7 +282,8 @@ export function FundingDisparity() {
           <div>
             <h4 className="font-bold text-white mb-2">🔒 The Exemption Doesn't Fix the Structural Problem</h4>
             <p className="text-sm">
-              The rural resort exemption was designed as a "safety valve," but only 1 of 12 counties has successfully used it.
+              The rural resort exemption was designed as a "safety valve," but only 1 of 12 counties has successfully used it—
+              and Summit County's petition required 6+ months, dedicated housing staff, expensive consultants, extensive meetings, and tens of thousands of dollars.
               The petition process requires capacity that small jurisdictions simply don't have, creating a barrier as insurmountable as the AMI limits themselves.
             </p>
           </div>
