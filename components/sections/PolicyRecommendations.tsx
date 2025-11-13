@@ -90,13 +90,6 @@ export function PolicyRecommendations() {
                 </div>
               )}
 
-              {rec.cost && (
-                <div className="bg-slate-50 rounded p-4 border-l-4 border-slate-500">
-                  <h4 className="font-semibold text-slate-900 mb-1">Cost</h4>
-                  <p className="text-sm text-slate-700">{rec.cost}</p>
-                </div>
-              )}
-
               {rec.alternatives && (
                 <div className="bg-indigo-50 rounded p-4 border-l-4 border-indigo-500">
                   <h4 className="font-semibold text-slate-900 mb-1">Alternatives</h4>
@@ -124,8 +117,8 @@ export function PolicyRecommendations() {
             </div>
             <ul className="space-y-2 text-slate-200 text-sm pl-11">
               <li>• Simplify petition process by eliminating weighted average requirement</li>
-              <li>• Provide free technical assistance for Housing Needs Assessments</li>
               <li>• Raise standard limits to 100% rental / 140% ownership for rural resort counties</li>
+              <li>• Eliminate petition requirement entirely for designated rural resort counties</li>
             </ul>
           </div>
 

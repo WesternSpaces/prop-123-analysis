@@ -208,12 +208,6 @@ export const POLICY_RECOMMENDATIONS = [
     benefit: 'Allows communities to address multiple housing needs without averaging them together.',
   },
   {
-    title: 'Provide Technical Assistance',
-    description: 'State should provide free technical assistance and templates for Housing Needs Assessments to smaller rural resort jurisdictions.',
-    rationale: 'Small mountain towns often lack the staff and expertise to complete complex HNAs with proper AMI bracket analysis.',
-    cost: 'Minimal compared to $300M annual funding; helps ensure funds reach communities that need them most.',
-  },
-  {
     title: 'Adjust 3% Growth Requirement',
     description: 'Allow alternative compliance pathways for land-constrained communities (e.g., Eagle County with 86% federal land).',
     rationale: 'Physical constraints make percentage-based growth requirements unrealistic in some geographies.',
