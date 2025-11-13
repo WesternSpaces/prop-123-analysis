@@ -47,7 +47,7 @@ export function ExecutiveSummary() {
           </li>
           <li className="flex items-start">
             <span className="text-blue-600 font-bold mr-3 text-lg">•</span>
-            <span>Units designed for <strong>120% AMI earners sat vacant</strong> in Breckenridge while workers commuted from distant towns</span>
+            <span>Counties <strong>can't access Prop 123 funding</strong> to build housing for workers earning 100-140% AMI, despite these workers being unable to afford market-rate homes</span>
           </li>
           <li className="flex items-start">
             <span className="text-blue-600 font-bold mr-3 text-lg">•</span>
