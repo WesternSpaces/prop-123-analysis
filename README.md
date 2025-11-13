@@ -1,36 +1,179 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proposition 123 AMI Analysis
+
+An educational website exposing the fundamental flaws in Colorado's Proposition 123 Area Median Income (AMI) limits and their impact on rural resort communities.
+
+## Overview
+
+This project provides policymakers with comprehensive analysis and data visualization showing why the 60% and 100% AMI limits prevent rural resort communities from addressing their workforce housing crisis—despite having access to $300 million in annual funding.
+
+## The Problem
+
+Colorado's Proposition 123 (approved November 2022) dedicates significant funding to affordable housing, but its AMI-based income limits create a "missing middle" problem in rural resort communities where:
+
+- Teachers, nurses, police officers, and service workers earn too much to qualify for 60% AMI housing
+- Even professionals earning $167,000 can't afford market-rate housing
+- AMI calculations are distorted by wealthy retirees and second-home owners
+- The rural resort exemption process creates bureaucratic barriers instead of solutions
+
+## Features
+
+### Content Sections
+
+1. **Executive Summary** - Overview of Proposition 123 and the core AMI problem
+2. **AMI Problem Deep Dive** - Detailed analysis with data visualizations showing why AMI fails in resort areas
+3. **Community Stories** - Real examples from Steamboat Springs, Breckenridge, Aspen, and other mountain towns
+4. **Rural Resort Exemption Paradox** - Visual flowchart showing the petition process and its catch-22 requirements
+5. **Data & Analysis** - Interactive charts showing funding gaps, vacancy rates, and implementation challenges
+6. **Policy Recommendations** - Six evidence-based solutions for policymakers
+
+### Technical Features
+
+- **Next.js 14+** with App Router for optimal performance
+- **TypeScript** for type safety
+- **Tailwind CSS** for responsive design
+- **Recharts** for interactive data visualizations
+- **Mobile-responsive** design suitable for tablets in legislative briefings
+- **SEO optimized** for discoverability
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.17 or later
+- npm or yarn package manager
+
+### Installation
+
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Building for Production
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+prop-123-analysis/
+├── app/
+│   ├── layout.tsx          # Root layout with metadata
+│   ├── page.tsx            # Main page assembling all sections
+│   └── globals.css         # Global styles
+├── components/
+│   ├── Navigation.tsx      # Sticky navigation header
+│   ├── Footer.tsx          # Footer with sources and links
+│   ├── sections/
+│   │   ├── Hero.tsx                    # Hero section with key stats
+│   │   ├── ExecutiveSummary.tsx        # Overview and summary
+│   │   ├── AMIProblem.tsx              # AMI analysis with charts
+│   │   ├── CommunityStories.tsx        # Real-world case studies
+│   │   ├── RuralResortExemption.tsx    # Petition process flowchart
+│   │   ├── DataAnalysis.tsx            # Funding and vacancy data
+│   │   └── PolicyRecommendations.tsx   # Policy solutions
+│   └── ui/
+│       ├── Section.tsx     # Reusable section component
+│       ├── Card.tsx        # Card component
+│       └── StatCard.tsx    # Statistics display card
+├── lib/
+│   └── data/
+│       └── constants.ts    # All research data and constants
+└── public/
+    └── downloads/          # Downloadable resources (PDFs, fact sheets)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Data Sources
 
-## Deploy on Vercel
+All data in this project comes from verified sources including:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Colorado Division of Housing** - Proposition 123 implementation guidance and petition processes
+- **Colorado Department of Local Affairs (CDOLA)** - Official program data
+- **HB23-1304** - Rural resort exemption legislation
+- **Colorado Sun, Denver Post, Colorado Public Radio** - Investigative reporting
+- **Local mountain town newspapers** - Community-specific case studies
+- **Bell Policy Center** - Policy analysis
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Key Statistics
+
+- **$300M** annual funding from 0.1% state income tax
+- **202/336** jurisdictions opted in (90% of population)
+- **12 rural resort counties** eligible for exemptions
+- **100,000+** affordable housing units needed statewide
+- **3-4x** funding demand exceeds supply in first round
+- **50%+** vacancy rates in Summit, Grand, Pitkin counties
+
+## Deployment
+
+### Vercel (Recommended)
+
+This project is optimized for deployment on Vercel:
+
+1. Push your code to GitHub
+2. Import the repository in Vercel
+3. Vercel will automatically detect Next.js and configure build settings
+4. Deploy!
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+### Other Platforms
+
+This Next.js application can be deployed to any platform supporting Node.js:
+
+- **Netlify**: Use the Next.js build plugin
+- **AWS Amplify**: Configure as a Next.js SSR app
+- **DigitalOcean App Platform**: Select Node.js environment
+- **Self-hosted**: Use `npm run build && npm start` with a process manager like PM2
+
+## Customization
+
+### Updating Data
+
+All data constants are centralized in `/lib/data/constants.ts`. To update:
+
+1. Edit the relevant constant (e.g., `CASE_STUDIES`, `POLICY_RECOMMENDATIONS`)
+2. Data will automatically propagate to all components
+3. No need to update individual components
+
+### Adding New Sections
+
+1. Create a new component in `/components/sections/`
+2. Import and add to `/app/page.tsx`
+3. Add navigation link in `/components/Navigation.tsx`
+
+### Styling
+
+The project uses Tailwind CSS. Customize colors and theme in `tailwind.config.ts`.
+
+## Future Enhancements
+
+Potential additions:
+
+- [ ] Downloadable PDF policy briefs
+- [ ] Printable fact sheets for legislators
+- [ ] Interactive map of 12 rural resort counties
+- [ ] Timeline visualization of Proposition 123 implementation
+- [ ] Comparison tool for different AMI scenarios
+- [ ] Petition success/failure tracking dashboard
+
+## License
+
+This project is intended for educational and advocacy purposes related to Colorado housing policy.
+
+## Contact
+
+For questions about the data, analysis, or to report corrections, please reach out through housing policy advocacy channels.
+
+---
+
+**Note**: This resource is designed to inform policy discussions. While all data is sourced from verified public records and reporting, users should verify specific details before citing in official contexts.
