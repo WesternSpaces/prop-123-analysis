@@ -116,9 +116,9 @@ export function PolicyRecommendations() {
               <h4 className="font-bold text-lg">Short-Term (2024-2025)</h4>
             </div>
             <ul className="space-y-2 text-slate-200 text-sm pl-11">
+              <li>• Align SB24-174 and Prop 123 AMI band requirements to eliminate duplicative work</li>
               <li>• Simplify petition process by eliminating weighted average requirement</li>
               <li>• Raise standard limits to 100% rental / 140% ownership for rural resort counties</li>
-              <li>• Eliminate petition requirement entirely for designated rural resort counties</li>
             </ul>
           </div>
 

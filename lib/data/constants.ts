@@ -208,6 +208,13 @@ export const POLICY_RECOMMENDATIONS = [
     benefit: 'Allows communities to address multiple housing needs without averaging them together.',
   },
   {
+    title: 'Align SB24-174 and Prop 123 Requirements',
+    description: 'Standardize AMI bands and methodology between SB24-174 Housing Needs Assessments and Prop 123 rural resort petitions to eliminate duplicative work.',
+    rationale: 'Currently, counties must complete housing needs assessments with different AMI band requirements for SB24-174 vs. Prop 123 petitions, forcing them to do the same analysis twice with incompatible methodologies.',
+    impact: 'Counties could use a single Housing Needs Assessment to satisfy both SB24-174 planning requirements and Prop 123 petition requirements, significantly reducing burden on small jurisdictions.',
+    implementation: 'DOLA and OEDIT/CHFA should coordinate to establish unified AMI bands and data requirements that satisfy both programs.',
+  },
+  {
     title: 'Adjust 3% Growth Requirement',
     description: 'Allow alternative compliance pathways for land-constrained communities (e.g., Eagle County with 86% federal land).',
     rationale: 'Physical constraints make percentage-based growth requirements unrealistic in some geographies.',
