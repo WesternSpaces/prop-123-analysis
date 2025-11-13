@@ -76,11 +76,11 @@ export function DataAnalysis() {
           </div>
           <div className="bg-slate-50 rounded p-4 mt-4">
             <h4 className="font-semibold text-slate-900 mb-3">Notable Awards</h4>
-            <ResponsiveContainer width="100%" height={250}>
-              <BarChart data={awardsData} layout="horizontal">
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart data={awardsData}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis type="number" label={{ value: 'Millions ($)', position: 'bottom' }} />
-                <YAxis type="category" dataKey="location" width={120} />
+                <XAxis dataKey="location" angle={-45} textAnchor="end" height={100} />
+                <YAxis label={{ value: 'Millions ($)', angle: -90, position: 'insideLeft' }} />
                 <Tooltip />
                 <Bar dataKey="amount" fill="#3b82f6">
                   {awardsData.map((entry, index) => (
