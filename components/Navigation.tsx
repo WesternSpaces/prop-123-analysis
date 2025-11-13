@@ -8,7 +8,8 @@ const navItems = [
   { label: 'The AMI Problem', href: '#ami-problem' },
   { label: 'Community Stories', href: '#stories' },
   { label: 'Rural Resort Exemption', href: '#exemption' },
-  { label: 'Data & Analysis', href: '#data' },
+  { label: 'Housing Crisis Data', href: '#housing-crisis-data' },
+  { label: 'Funding Analysis', href: '#data' },
   { label: 'Policy Solutions', href: '#solutions' },
 ];
 
