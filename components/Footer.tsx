@@ -62,7 +62,7 @@ export function Footer() {
               This educational resource was created to inform policymakers and advocates about the AMI limits challenge.
             </p>
             <p className="mb-4">
-              Data current as of January 2025
+              Data current as of November 2025
             </p>
             <div className="bg-slate-800 rounded-lg p-4 inline-block">
               <p className="text-slate-200 font-semibold mb-1">For Questions or More Information:</p>
