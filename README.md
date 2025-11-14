@@ -20,11 +20,12 @@ Colorado's Proposition 123 (approved November 2022) dedicates significant fundin
 ### Content Sections
 
 1. **Executive Summary** - Overview of Proposition 123 and the core AMI problem
-2. **AMI Problem Deep Dive** - Detailed analysis with data visualizations showing why AMI fails in resort areas
-3. **Community Stories** - Real examples from Steamboat Springs, Breckenridge, Aspen, and other mountain towns
-4. **Rural Resort Exemption Paradox** - Visual flowchart showing the petition process and its catch-22 requirements
-5. **Data & Analysis** - Interactive charts showing funding gaps, vacancy rates, and implementation challenges
-6. **Policy Recommendations** - Six evidence-based solutions for policymakers
+2. **AMI Problem Deep Dive** - Four key reasons why AMI fails in resort areas with data visualizations
+3. **Rural Resort Exemption Paradox** - The petition process, Summit County's costly success, and withdrawn petitions
+4. **Housing Crisis Data** - Vacancy paradox, affordability gap, cost burden analysis, and AMI distribution
+5. **Funding Disparity** - The double-bind: can't compete without exemption, can't get exemption
+6. **Data & Analysis** - First round funding results, funding gap charts, and implementation challenges
+7. **Policy Recommendations** - Evidence-based solutions including SB24-174 alignment and simplified petition process
 
 ### Technical Features
 
@@ -78,9 +79,10 @@ prop-123-analysis/
 │   │   ├── Hero.tsx                    # Hero section with key stats
 │   │   ├── ExecutiveSummary.tsx        # Overview and summary
 │   │   ├── AMIProblem.tsx              # AMI analysis with charts
-│   │   ├── CommunityStories.tsx        # Real-world case studies
-│   │   ├── RuralResortExemption.tsx    # Petition process flowchart
-│   │   ├── DataAnalysis.tsx            # Funding and vacancy data
+│   │   ├── RuralResortExemption.tsx    # Petition process and exemption challenges
+│   │   ├── HousingCrisisData.tsx       # Vacancy paradox and affordability data
+│   │   ├── FundingDisparity.tsx        # Double-bind analysis and funding distribution
+│   │   ├── DataAnalysis.tsx            # Funding results and implementation
 │   │   └── PolicyRecommendations.tsx   # Policy solutions
 │   └── ui/
 │       ├── Section.tsx     # Reusable section component
@@ -108,10 +110,13 @@ All data in this project comes from verified sources including:
 
 - **$300M** annual funding from 0.1% state income tax
 - **202/336** jurisdictions opted in (90% of population)
-- **12 rural resort counties** eligible for exemptions
-- **100,000+** affordable housing units needed statewide
-- **3-4x** funding demand exceeds supply in first round
-- **50%+** vacancy rates in Summit, Grand, Pitkin counties
+- **13 rural resort counties** (12 designated + Hinsdale applying)
+- **34.9%** overall vacancy rate in rural resort counties (3x healthy rate)
+- **79.2%** of vacant units are seasonal/recreational (unavailable to workers)
+- **Only 2 of 12** counties successfully petitioned for exemption (Summit, Lake)
+- **5 jurisdictions withdrew** petitions before decision
+- **Front Range: 56%** of land banking funds vs. **Rural Resort: 21%**
+- **9 of 12** rural resort counties received ZERO development funding
 
 ## Deployment
 
@@ -170,10 +175,27 @@ Potential additions:
 
 This project is intended for educational and advocacy purposes related to Colorado housing policy.
 
+## Data Processing Workflow
+
+This project includes a reusable workflow for processing county-level data:
+
+1. **Data Collection**: Place Excel/CSV files in `/data/` folder
+2. **Data Extraction**: Use Claude Code's Task agent to analyze spreadsheets and extract structured data
+3. **TypeScript Constants**: Agent creates TypeScript constants in `/lib/data/constants.ts`
+4. **Component Integration**: Components automatically consume data from constants
+5. **API Endpoints**: `/app/api/` routes expose data for programmatic access
+6. **Visualization**: Recharts components render data as interactive charts
+
+This workflow can be replicated for similar county-level analysis projects with different data sources and policy focuses.
+
 ## Contact
 
-For questions about the data, analysis, or to report corrections, please reach out through housing policy advocacy channels.
+**Sarah Brown McClain**
+Western Spaces
+[sarah@westernspaces.org](mailto:sarah@westernspaces.org)
+
+For questions about the data, analysis, or to report corrections.
 
 ---
 
-**Note**: This resource is designed to inform policy discussions. While all data is sourced from verified public records and reporting, users should verify specific details before citing in official contexts.
+**Note**: This is a high-level analysis prepared for discussion purposes only. While every effort has been made to ensure accuracy, this resource is intended as an educational overview and should not be relied upon as comprehensive policy guidance or legal advice. Data current as of November 2025.
