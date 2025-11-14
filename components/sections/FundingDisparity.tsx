@@ -68,7 +68,7 @@ export function FundingDisparity() {
           <div className="text-6xl mb-3 text-center">❌</div>
           <h4 className="font-bold text-xl mb-3 text-center">Result: Locked Out of Funding</h4>
           <p className="text-white/90 text-center">
-            <strong>Only 1 of 12 rural resort counties</strong> successfully obtained the exemption.
+            <strong>Only 2 of 12 rural resort counties</strong> successfully obtained the exemption (Summit was first, Lake followed).
             <strong>9 of 12 counties received zero development funding</strong> in first round.
             Rural resort counties captured only <strong>16.8% of total Prop 123 funds</strong> despite representing some of the state's most severe housing crises.
           </p>
@@ -166,7 +166,7 @@ export function FundingDisparity() {
           <div className="bg-green-50 rounded p-4 border-l-4 border-green-500">
             <div className="font-bold text-green-900 mb-2">Significant Funding (2 counties)</div>
             <p className="text-green-700 text-xs">
-              Only Grand ($14.5M) and Summit ($6.38M) received substantial awards. Summit is the only county that successfully petitioned for the rural resort exemption—but at enormous cost (see below).
+              Only Grand ($14.5M) and Summit ($6.38M) received substantial awards. Summit was the first county to successfully petition for the rural resort exemption—but at enormous cost (see below).
             </p>
           </div>
         </div>
@@ -180,7 +180,7 @@ export function FundingDisparity() {
             Summit County is held up as proof the exemption works—but the reality is more complicated
           </h4>
           <p className="text-yellow-800 text-sm mb-3">
-            Summit County is the <strong>only rural resort county (out of 12)</strong> to successfully petition for the exemption allowing higher AMI limits.
+            Summit County was the <strong>first rural resort county</strong> to successfully petition for the exemption allowing higher AMI limits (Lake County followed later).
             While this is technically a "success," the process required extraordinary resources that most rural counties simply don't have.
           </p>
         </div>
@@ -261,7 +261,7 @@ export function FundingDisparity() {
           </p>
           <div className="bg-white rounded p-4 mt-4">
             <p className="text-red-900 font-bold text-sm mb-3">
-              Result: 11 of 12 rural resort counties have NOT successfully petitioned, and 9 of 12 received ZERO development funding.
+              Result: 10 of 12 rural resort counties have NOT successfully petitioned (only Summit and Lake succeeded), and 9 of 12 received ZERO development funding.
               The exemption exists on paper, but functions as another insurmountable barrier in practice.
             </p>
           </div>
@@ -300,8 +300,8 @@ export function FundingDisparity() {
           <div>
             <h4 className="font-bold text-white mb-2">🔒 The Exemption Doesn't Fix the Structural Problem</h4>
             <p className="text-sm">
-              The rural resort exemption was designed as a "safety valve," but only 1 of 12 counties has successfully used it—
-              and Summit County's petition required 6+ months, dedicated housing staff, expensive consultants, extensive meetings, and tens of thousands of dollars.
+              The rural resort exemption was designed as a "safety valve," but only 2 of 12 counties have successfully used it—
+              and Summit County's petition (the first) required 6+ months, dedicated housing staff, expensive consultants, extensive meetings, and tens of thousands of dollars.
               The petition process requires capacity that small jurisdictions simply don't have, creating a barrier as insurmountable as the AMI limits themselves.
             </p>
           </div>
