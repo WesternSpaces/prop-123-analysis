@@ -50,20 +50,6 @@ export function Footer() {
 
         <div className="border-t border-slate-700 pt-8">
           <div className="text-center text-sm text-slate-400">
-            <div className="bg-slate-800 rounded-lg p-6 mb-6 max-w-4xl mx-auto">
-              <p className="text-yellow-400 font-semibold mb-2">DISCLAIMER</p>
-              <p className="text-slate-300 text-xs">
-                This is a high-level analysis prepared for discussion purposes only. While every effort has been made to ensure accuracy,
-                this resource is intended as an educational overview and should not be relied upon as comprehensive policy guidance or legal advice.
-                Data and interpretations are subject to ongoing changes in Proposition 123 implementation and legislative updates.
-              </p>
-            </div>
-            <p className="mb-2">
-              This educational resource was created to inform policymakers and advocates about the AMI limits challenge.
-            </p>
-            <p className="mb-4">
-              Data current as of November 2025
-            </p>
             <div className="bg-slate-800 rounded-lg p-4 inline-block">
               <p className="text-slate-200 font-semibold mb-1">For Questions or More Information:</p>
               <p className="text-slate-300">
