@@ -192,7 +192,7 @@ This workflow can be replicated for similar county-level analysis projects with 
 
 **Sarah Brown McClain**
 Western Spaces
-[sarah@westernspaces.org](mailto:sarah@westernspaces.org)
+[sarah@westernspaces.co](mailto:sarah@westernspaces.co)
 
 For questions about the data, analysis, or to report corrections.
 

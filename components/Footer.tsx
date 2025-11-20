@@ -68,8 +68,8 @@ export function Footer() {
               <p className="text-slate-200 font-semibold mb-1">For Questions or More Information:</p>
               <p className="text-slate-300">
                 Sarah Brown McClain<br/>
-                <a href="mailto:sarah@westernspaces.org" className="text-blue-400 hover:text-blue-300 underline">
-                  sarah@westernspaces.org
+                <a href="mailto:sarah@westernspaces.co" className="text-blue-400 hover:text-blue-300 underline">
+                  sarah@westernspaces.co
                 </a>
               </p>
             </div>
