@@ -34,16 +34,6 @@ export function Footer() {
                   HB23-1304 Bill Text
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-white underline">
-                  Download Policy Brief (PDF)
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white underline">
-                  Download Fact Sheet (PDF)
-                </a>
-              </li>
             </ul>
           </div>
         </div>
